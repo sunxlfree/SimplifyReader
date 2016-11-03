@@ -18,6 +18,7 @@ package com.github.obsessive.library.utils;
 
 import android.content.Context;
 import android.content.res.TypedArray;
+import android.text.TextUtils;
 
 import java.net.HttpURLConnection;
 import java.net.URL;
@@ -40,7 +41,7 @@ public class CommonUtils {
      * @return
      */
     public static boolean isEmpty(String str) {
-        if (str == null || str.length() == 0 || str.equalsIgnoreCase("null") || str.isEmpty() || str.equals("")) {
+        if (TextUtils.isEmpty(str) || "null".equals(str)){
             return true;
         } else {
             return false;
